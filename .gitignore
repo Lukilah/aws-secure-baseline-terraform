@@ -1,0 +1,16 @@
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files contain cleartext sensitive values and metadata
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+
+# CLI and crash logs
+crash.log
+crash.*.log
+*.log
+
+# Secret / environment configs
+.env
