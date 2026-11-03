@@ -1,7 +1,8 @@
 # Local .terraform directories
 **/.terraform/*
+.terraform/
 
-# .tfstate files contain cleartext sensitive values and metadata
+# Terraform lock and state files
 *.tfstate
 *.tfstate.*
 *.tfvars
