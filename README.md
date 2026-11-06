@@ -100,7 +100,7 @@ A comprehensive architectural threat model and compliance review was performed f
 * **Detailed Report**: [docs/threat-model.md](docs/threat-model.md)
 
 ### Data Flow Diagram & Trust Boundaries
-![docs/"tera diagram.png"](docs/"tera diagram.png")
+* **Architecture Diagram**: [docs/"tera diagram.png"](docs/"tera diagram.png")
 
 ### Summary of Assessed Threats
 * **Total Threats Evaluated**: 12 across Identity, Network, Storage, and Supply Chain layers.
