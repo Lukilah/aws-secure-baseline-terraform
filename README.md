@@ -87,9 +87,9 @@ checkov -d . --framework terraform --compact
 ---
 
 ### 6. Takeaways
-** a) Defaults in Cloud Providers are Rarely "Secure by Default":** AWS prioritizes convenience and backward compatibility (e.g., default security groups allowing all internal communication, subnets auto-assigning public IPs). Production readiness requires active hardening as code.
-** b) Storage Hygiene Directly Impacts Cost & Security:** Failing to abort incomplete multipart uploads (CKV_AWS_300) leaves hidden binary parts accumulating storage costs without visible bucket objects.
-** c) DevSecOps Balances Enforcement with Context:** Static analysis tools are opinionated. Demonstrating the ability to weigh risk versus operational overhead through documented, defensible skips is essential for cloud engineering pragmatism.
+* ** a) Defaults in Cloud Providers are Rarely "Secure by Default"**: AWS prioritizes convenience and backward compatibility (e.g., default security groups allowing all internal communication, subnets auto-assigning public IPs). Production readiness requires active hardening as code.
+* ** b) Storage Hygiene Directly Impacts Cost & Security**: Failing to abort incomplete multipart uploads (CKV_AWS_300) leaves hidden binary parts accumulating storage costs without visible bucket objects.
+* ** c) DevSecOps Balances Enforcement with Context**: Static analysis tools are opinionated. Demonstrating the ability to weigh risk versus operational overhead through documented, defensible skips is essential for cloud engineering pragmatism.
 
 
 ## 7. Threat Model & Security Architecture Review
@@ -100,7 +100,7 @@ A comprehensive architectural threat model and compliance review was performed f
 * **Detailed Report**: [docs/threat-model.md](docs/threat-model.md)
 
 ### Data Flow Diagram & Trust Boundaries
-![Threat Model Architecture](docs/architecture.png)
+![Threat Model Architecture](docs/tera diagram.png)
 
 ### Summary of Assessed Threats
 * **Total Threats Evaluated**: 12 across Identity, Network, Storage, and Supply Chain layers.
