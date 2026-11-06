@@ -83,8 +83,14 @@ terraform validate
 
 # 3. Execute Checkov static analysis
 checkov -d . --framework terraform --compact
-
+```
 ---
+
+### 6. Takeaways
+** a) Defaults in Cloud Providers are Rarely "Secure by Default":** AWS prioritizes convenience and backward compatibility (e.g., default security groups allowing all internal communication, subnets auto-assigning public IPs). Production readiness requires active hardening as code.
+** b) Storage Hygiene Directly Impacts Cost & Security:** Failing to abort incomplete multipart uploads (CKV_AWS_300) leaves hidden binary parts accumulating storage costs without visible bucket objects.
+** c) DevSecOps Balances Enforcement with Context:** Static analysis tools are opinionated. Demonstrating the ability to weigh risk versus operational overhead through documented, defensible skips is essential for cloud engineering pragmatism.
+
 
 ## 7. Threat Model & Security Architecture Review
 
