@@ -83,3 +83,20 @@ terraform validate
 
 # 3. Execute Checkov static analysis
 checkov -d . --framework terraform --compact
+
+---
+
+## 7. Threat Model & Security Architecture Review
+
+A comprehensive architectural threat model and compliance review was performed for this baseline:
+
+* **Frameworks Applied**: STRIDE Threat Modeling & CIS AWS Foundations Benchmark (v3.0.0)
+* **Detailed Report**: [docs/threat-model.md](docs/threat-model.md)
+
+### Data Flow Diagram & Trust Boundaries
+![Threat Model Architecture](docs/architecture.png)
+
+### Summary of Assessed Threats
+* **Total Threats Evaluated**: 12 across Identity, Network, Storage, and Supply Chain layers.
+* **Critical Attack Vectors Mitigated**: Remediated public SSH exposure (Port 22), wildcard IAM administrative escalation, unencrypted data at rest, and unrestricted VPC default security groups.
+* **Compliance Mapping**: Formally mapped against 12 core CIS AWS Foundations Benchmark controls with verifiable implementation evidence.
